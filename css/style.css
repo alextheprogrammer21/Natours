@@ -112,8 +112,22 @@ body {
 .row {
   max-width: 114rem;
   margin: 0 auto;
-  background-color: #eee;
-  margin-bottom: 8rem; }
+  background-color: #eee; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^="col-"] {
+    background-color: orangered;
+    float: left; }
+    .row [class^="col-"]:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
 
 .header {
   height: 95vh;
@@ -121,10 +135,11 @@ body {
   background-size: cover;
   background-position: top;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%) .header __logo-box;
-    clip-path-position: absolute;
-    clip-path-top: 4rem;
-    clip-path-left: 4rem; }
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
   .header__logo {
     height: 3.5rem; }
   .header__text-box {
