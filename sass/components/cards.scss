@@ -29,6 +29,12 @@ transform: rotateY(-180deg);
 &-1 {
   background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
  }
+ &-2 {
+  background-image: linear-gradient(to right bottom, green, darkgreen);
+ }
+ &-3 {
+  background-image: linear-gradient(to right bottom, blue, darkblue);
+ }
   }
  }
 
@@ -47,15 +53,16 @@ transform: rotateY(-180deg);
   height: 23rem;
   background-blend-mode: screen;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  margin-top: -4rem;
   
     &--1 {
       background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), url(../img/nat-5.jpg);
     }
     &--2 {
-      background-image: url(../img/nat-5.jpg);
+      background-image: linear-gradient(to right bottom, green, darkgreen), url(../img/nat-6.jpg);
     }
     &--3 {
-      background-image: url(../img/nat-5.jpg);
+      background-image: linear-gradient(to right bottom, blue, darkblue), url(../img/nat-7.jpg);
     }
  }
 
@@ -76,11 +83,17 @@ transform: rotateY(-180deg);
   &--1 {
     background-image: linear-gradient(to right bottom, rgba($color-secondary-light, .85), rgba($color-secondary-dark, .85));
   }
+  &--2 {
+    background-image: linear-gradient(to right bottom, rgba(green, .85), rgba(darkgreen, .85));
+  }
+  &--3 {
+    background-image: linear-gradient(to right bottom, rgba(blue, .85), rgba(darkblue, .85));
+  }
  }
 
  &__details {
    padding: 2rem;
-   margin-top: -1rem;
+   margin-top: 1rem;
    ul {
     list-style: none;
     width: 80%;
@@ -97,5 +110,31 @@ transform: rotateY(-180deg);
       }
     }
    }
+ }
+
+ //BACK SIDE STYLING
+ &__cta {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 90%;
+   text-align: center;
+ }
+
+ &__price-box {
+  text-align: center;
+  margin-bottom: 8rem;
+  color: white;
+ }
+
+ &__price-only {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+ }
+
+ &__price-value {
+   font-size: 6rem;
+   font-weight: 100;
  }
 }
