@@ -1,5 +1,5 @@
 ### Natours 
-A landing page for outdoor tours! 
+A landing page for outdoor tours! You can visit the page at: https://alextheprogrammer21.github.io/Natours/
 
 ## Images 
 
